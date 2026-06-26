@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.InteractionPlugin.cpp.obj": [
+			"InteractionComponent.gen.cpp.obj",
+			"InteractionExampleActor.gen.cpp.obj",
+			"InteractionInteractorComponent.gen.cpp.obj",
+			"InteractionPlugin.init.gen.cpp.obj",
+			"InteractionPromptWidgetBase.gen.cpp.obj",
+			"InteractionTypes.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"InteractionExampleActor.cpp.obj",
+			"InteractionComponent.cpp.obj",
+			"InteractionInteractorComponent.cpp.obj",
+			"InteractionPlugin.cpp.obj",
+			"InteractionPromptWidgetBase.cpp.obj"
+		]
+	}
+}

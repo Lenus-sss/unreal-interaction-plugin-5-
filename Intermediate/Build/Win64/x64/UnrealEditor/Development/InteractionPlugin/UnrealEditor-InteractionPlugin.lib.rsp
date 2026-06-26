@@ -1,0 +1,17 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-InteractionPlugin.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:/UnrealEngine/Projects/ForVariousComponents/Intermediate/Build/Win64/x64/ForVariousComponentsEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/Module.InteractionPlugin.cpp.obj"
+"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionComponent.cpp.obj"
+"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionInteractorComponent.cpp.obj"
+"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPlugin.cpp.obj"
+"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPromptWidgetBase.cpp.obj"
+"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionExampleActor.cpp.obj"
+"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/Default.rc2.res"
+/OUT:"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/UnrealEditor-InteractionPlugin.lib"

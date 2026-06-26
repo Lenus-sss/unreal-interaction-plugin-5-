@@ -1,0 +1,23 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0.0",
+  "FriendlyName": "Interaction Plugin",
+  "Description": "A C++ runtime interaction plugin with crosshair detection and world-space prompts.",
+  "Category": "Gameplay",
+  "CreatedBy": "",
+  "CreatedByURL": "",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": true,
+  "IsBetaVersion": true,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "InteractionPlugin",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}
