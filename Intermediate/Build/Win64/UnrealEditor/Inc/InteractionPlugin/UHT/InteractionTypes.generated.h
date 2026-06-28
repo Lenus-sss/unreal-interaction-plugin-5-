@@ -14,12 +14,11 @@
 #include "Templates/IsUEnumClass.h"
 #include "UObject/ObjectMacros.h"
 #include "UObject/ReflectedTypeAccessors.h"
-#include "Templates/NoDestroy.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionTypes_h
+#define CURRENT_FILE_ID FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionTypes_h
 
 // ********** Begin Enum EInteractionAction ********************************************************
 #define FOREACH_ENUM_EINTERACTIONACTION(op) \
@@ -28,7 +27,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 enum class EInteractionAction : uint8;
 template<> struct TIsUEnumClass<EInteractionAction> { enum { Value = true }; };
-template<> INTERACTIONPLUGIN_NON_ATTRIBUTED_API UEnum* StaticEnum<EInteractionAction>();
+template<> INTERACTIONPLUGIN_API UEnum* StaticEnum<EInteractionAction>();
 // ********** End Enum EInteractionAction **********************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

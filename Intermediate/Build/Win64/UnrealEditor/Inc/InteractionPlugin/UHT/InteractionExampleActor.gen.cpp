@@ -8,7 +8,7 @@
 #include "Examples/InteractionExampleActor.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
+
 void EmptyLinkFunctionForGeneratedCodeInteractionExampleActor() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -21,6 +21,9 @@ UPackage* Z_Construct_UPackage__Script_InteractionPlugin();
 // ********** End Cross Module References **********************************************************
 
 // ********** Begin Class AInteractionExampleActor *************************************************
+void AInteractionExampleActor::StaticRegisterNativesAInteractionExampleActor()
+{
+}
 FClassRegistrationInfo Z_Registration_Info_UClass_AInteractionExampleActor;
 UClass* AInteractionExampleActor::GetPrivateStaticClass()
 {
@@ -28,7 +31,7 @@ UClass* AInteractionExampleActor::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_AInteractionExampleActor.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			TClass::StaticPackage(),
+			StaticPackage(),
 			TEXT("InteractionExampleActor"),
 			Z_Registration_Info_UClass_AInteractionExampleActor.InnerSingleton,
 			StaticRegisterNativesAInteractionExampleActor,
@@ -88,20 +91,15 @@ struct Z_Construct_UClass_AInteractionExampleActor_Statics
 #endif
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Class AInteractionExampleActor constinit property declarations *****************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CubeMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractionComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Class AInteractionExampleActor constinit property declarations *******************
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AInteractionExampleActor>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-}; // struct Z_Construct_UClass_AInteractionExampleActor_Statics
-
-// ********** Begin Class AInteractionExampleActor Property Definitions ****************************
+};
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AInteractionExampleActor_Statics::NewProp_CubeMesh = { "CubeMesh", nullptr, (EPropertyFlags)0x01140000000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AInteractionExampleActor, CubeMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CubeMesh_MetaData), NewProp_CubeMesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AInteractionExampleActor_Statics::NewProp_InteractionComponent = { "InteractionComponent", nullptr, (EPropertyFlags)0x01140000000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AInteractionExampleActor, InteractionComponent), Z_Construct_UClass_UInteractionComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionComponent_MetaData), NewProp_InteractionComponent_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AInteractionExampleActor_Statics::PropPointers[] = {
@@ -109,7 +107,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AInteract
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AInteractionExampleActor_Statics::NewProp_InteractionComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AInteractionExampleActor_Statics::PropPointers) < 2048);
-// ********** End Class AInteractionExampleActor Property Definitions ******************************
 UObject* (*const Z_Construct_UClass_AInteractionExampleActor_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_AActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_InteractionPlugin,
@@ -127,12 +124,9 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AInteractionExampleActo
 	0,
 	UE_ARRAY_COUNT(Z_Construct_UClass_AInteractionExampleActor_Statics::PropPointers),
 	0,
-	0x009000A4u,
+	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AInteractionExampleActor_Statics::Class_MetaDataParams), Z_Construct_UClass_AInteractionExampleActor_Statics::Class_MetaDataParams)
 };
-void AInteractionExampleActor::StaticRegisterNativesAInteractionExampleActor()
-{
-}
 UClass* Z_Construct_UClass_AInteractionExampleActor()
 {
 	if (!Z_Registration_Info_UClass_AInteractionExampleActor.OuterSingleton)
@@ -141,23 +135,21 @@ UClass* Z_Construct_UClass_AInteractionExampleActor()
 	}
 	return Z_Registration_Info_UClass_AInteractionExampleActor.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, AInteractionExampleActor);
+DEFINE_VTABLE_PTR_HELPER_CTOR(AInteractionExampleActor);
 AInteractionExampleActor::~AInteractionExampleActor() {}
 // ********** End Class AInteractionExampleActor ***************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_Statics
+struct Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AInteractionExampleActor, AInteractionExampleActor::StaticClass, TEXT("AInteractionExampleActor"), &Z_Registration_Info_UClass_AInteractionExampleActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AInteractionExampleActor), 3714118547U) },
+		{ Z_Construct_UClass_AInteractionExampleActor, AInteractionExampleActor::StaticClass, TEXT("AInteractionExampleActor"), &Z_Registration_Info_UClass_AInteractionExampleActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AInteractionExampleActor), 3838416813U) },
 	};
-}; // Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_336106140{
-	TEXT("/Script/InteractionPlugin"),
-	Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_Statics::ClassInfo),
-	nullptr, 0,
-	nullptr, 0,
 };
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_4167644918(TEXT("/Script/InteractionPlugin"),
+	Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_Examples_InteractionExampleActor_h__Script_InteractionPlugin_Statics::ClassInfo),
+	nullptr, 0,
+	nullptr, 0);
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

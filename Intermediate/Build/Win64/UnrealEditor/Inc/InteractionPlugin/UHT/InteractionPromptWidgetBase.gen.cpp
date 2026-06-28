@@ -8,7 +8,7 @@
 #include "InteractionPromptWidgetBase.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
+
 void EmptyLinkFunctionForGeneratedCodeInteractionPromptWidgetBase() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -44,25 +44,16 @@ struct Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponen
 		{ "EditInline", "true" },
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Function GetInteractionComponent constinit property declarations ***************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Function GetInteractionComponent constinit property declarations *****************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-
-// ********** Begin Function GetInteractionComponent Property Definitions **************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InteractionPromptWidgetBase_eventGetInteractionComponent_Parms, ReturnValue), Z_Construct_UClass_UInteractionComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::PropPointers) < 2048);
-// ********** End Function GetInteractionComponent Property Definitions ****************************
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionPromptWidgetBase, nullptr, "GetInteractionComponent", 	Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::PropPointers), 
-sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::InteractionPromptWidgetBase_eventGetInteractionComponent_Parms),
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionPromptWidgetBase, nullptr, "GetInteractionComponent", Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::InteractionPromptWidgetBase_eventGetInteractionComponent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent_Statics::InteractionPromptWidgetBase_eventGetInteractionComponent_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent()
 {
@@ -101,25 +92,16 @@ struct Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics
 #endif
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Function GetPromptText constinit property declarations *************************
 	static const UECodeGen_Private::FTextPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Function GetPromptText constinit property declarations ***************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-
-// ********** Begin Function GetPromptText Property Definitions ************************************
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InteractionPromptWidgetBase_eventGetPromptText_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::PropPointers) < 2048);
-// ********** End Function GetPromptText Property Definitions **************************************
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionPromptWidgetBase, nullptr, "GetPromptText", 	Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::PropPointers), 
-sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::InteractionPromptWidgetBase_eventGetPromptText_Parms),
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionPromptWidgetBase, nullptr, "GetPromptText", Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::InteractionPromptWidgetBase_eventGetPromptText_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText_Statics::InteractionPromptWidgetBase_eventGetPromptText_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText()
 {
@@ -169,25 +151,16 @@ struct Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_St
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Function OnPromptTextChanged constinit property declarations *******************
 	static const UECodeGen_Private::FTextPropertyParams NewProp_InPromptText;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Function OnPromptTextChanged constinit property declarations *********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-
-// ********** Begin Function OnPromptTextChanged Property Definitions ******************************
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::NewProp_InPromptText = { "InPromptText", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InteractionPromptWidgetBase_eventOnPromptTextChanged_Parms, InPromptText), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InPromptText_MetaData), NewProp_InPromptText_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::NewProp_InPromptText,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::PropPointers) < 2048);
-// ********** End Function OnPromptTextChanged Property Definitions ********************************
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionPromptWidgetBase, nullptr, "OnPromptTextChanged", 	Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::PropPointers), 
-sizeof(InteractionPromptWidgetBase_eventOnPromptTextChanged_Parms),
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08420800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionPromptWidgetBase, nullptr, "OnPromptTextChanged", Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::PropPointers), sizeof(InteractionPromptWidgetBase_eventOnPromptTextChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08420800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(InteractionPromptWidgetBase_eventOnPromptTextChanged_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged()
 {
@@ -222,25 +195,16 @@ struct Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Function SetPromptText constinit property declarations *************************
 	static const UECodeGen_Private::FTextPropertyParams NewProp_InPromptText;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Function SetPromptText constinit property declarations ***************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-
-// ********** Begin Function SetPromptText Property Definitions ************************************
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::NewProp_InPromptText = { "InPromptText", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InteractionPromptWidgetBase_eventSetPromptText_Parms, InPromptText), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InPromptText_MetaData), NewProp_InPromptText_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::NewProp_InPromptText,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::PropPointers) < 2048);
-// ********** End Function SetPromptText Property Definitions **************************************
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionPromptWidgetBase, nullptr, "SetPromptText", 	Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::PropPointers), 
-sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::InteractionPromptWidgetBase_eventSetPromptText_Parms),
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionPromptWidgetBase, nullptr, "SetPromptText", Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::InteractionPromptWidgetBase_eventSetPromptText_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText_Statics::InteractionPromptWidgetBase_eventSetPromptText_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText()
 {
@@ -262,6 +226,16 @@ DEFINE_FUNCTION(UInteractionPromptWidgetBase::execSetPromptText)
 // ********** End Class UInteractionPromptWidgetBase Function SetPromptText ************************
 
 // ********** Begin Class UInteractionPromptWidgetBase *********************************************
+void UInteractionPromptWidgetBase::StaticRegisterNativesUInteractionPromptWidgetBase()
+{
+	UClass* Class = UInteractionPromptWidgetBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetInteractionComponent", &UInteractionPromptWidgetBase::execGetInteractionComponent },
+		{ "GetPromptText", &UInteractionPromptWidgetBase::execGetPromptText },
+		{ "SetPromptText", &UInteractionPromptWidgetBase::execSetPromptText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+}
 FClassRegistrationInfo Z_Registration_Info_UClass_UInteractionPromptWidgetBase;
 UClass* UInteractionPromptWidgetBase::GetPrivateStaticClass()
 {
@@ -269,7 +243,7 @@ UClass* UInteractionPromptWidgetBase::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UInteractionPromptWidgetBase.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			TClass::StaticPackage(),
+			StaticPackage(),
 			TEXT("InteractionPromptWidgetBase"),
 			Z_Registration_Info_UClass_UInteractionPromptWidgetBase.InnerSingleton,
 			StaticRegisterNativesUInteractionPromptWidgetBase,
@@ -380,8 +354,6 @@ struct Z_Construct_UClass_UInteractionPromptWidgetBase_Statics
 #endif
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Class UInteractionPromptWidgetBase constinit property declarations *************
 	static const UECodeGen_Private::FIntPropertyParams NewProp_PromptTextFontSize;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_PromptIconSize;
 	static const UECodeGen_Private::FTextPropertyParams NewProp_PromptText;
@@ -389,27 +361,19 @@ struct Z_Construct_UClass_UInteractionPromptWidgetBase_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PromptIcon;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractionComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Class UInteractionPromptWidgetBase constinit property declarations ***************
-	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
-		{ .NameUTF8 = UTF8TEXT("GetInteractionComponent"), .Pointer = &UInteractionPromptWidgetBase::execGetInteractionComponent },
-		{ .NameUTF8 = UTF8TEXT("GetPromptText"), .Pointer = &UInteractionPromptWidgetBase::execGetPromptText },
-		{ .NameUTF8 = UTF8TEXT("SetPromptText"), .Pointer = &UInteractionPromptWidgetBase::execSetPromptText },
-	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent, "GetInteractionComponent" }, // 3296843092
-		{ &Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText, "GetPromptText" }, // 3247357087
-		{ &Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged, "OnPromptTextChanged" }, // 3860534319
-		{ &Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText, "SetPromptText" }, // 2137896738
+		{ &Z_Construct_UFunction_UInteractionPromptWidgetBase_GetInteractionComponent, "GetInteractionComponent" }, // 600914433
+		{ &Z_Construct_UFunction_UInteractionPromptWidgetBase_GetPromptText, "GetPromptText" }, // 56985115
+		{ &Z_Construct_UFunction_UInteractionPromptWidgetBase_OnPromptTextChanged, "OnPromptTextChanged" }, // 813944012
+		{ &Z_Construct_UFunction_UInteractionPromptWidgetBase_SetPromptText, "SetPromptText" }, // 3341011787
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UInteractionPromptWidgetBase>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-}; // struct Z_Construct_UClass_UInteractionPromptWidgetBase_Statics
-
-// ********** Begin Class UInteractionPromptWidgetBase Property Definitions ************************
+};
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::NewProp_PromptTextFontSize = { "PromptTextFontSize", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionPromptWidgetBase, PromptTextFontSize), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptTextFontSize_MetaData), NewProp_PromptTextFontSize_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::NewProp_PromptIconSize = { "PromptIconSize", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionPromptWidgetBase, PromptIconSize), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptIconSize_MetaData), NewProp_PromptIconSize_MetaData) };
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::NewProp_PromptText = { "PromptText", nullptr, (EPropertyFlags)0x0040000000002014, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionPromptWidgetBase, PromptText), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptText_MetaData), NewProp_PromptText_MetaData) };
@@ -425,7 +389,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInteract
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::NewProp_InteractionComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::PropPointers) < 2048);
-// ********** End Class UInteractionPromptWidgetBase Property Definitions **************************
 UObject* (*const Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UUserWidget,
 	(UObject* (*)())Z_Construct_UPackage__Script_InteractionPlugin,
@@ -446,11 +409,6 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UInteractionPromptWidge
 	0x00B010A1u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::Class_MetaDataParams), Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::Class_MetaDataParams)
 };
-void UInteractionPromptWidgetBase::StaticRegisterNativesUInteractionPromptWidgetBase()
-{
-	UClass* Class = UInteractionPromptWidgetBase::StaticClass();
-	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UInteractionPromptWidgetBase_Statics::Funcs));
-}
 UClass* Z_Construct_UClass_UInteractionPromptWidgetBase()
 {
 	if (!Z_Registration_Info_UClass_UInteractionPromptWidgetBase.OuterSingleton)
@@ -460,23 +418,21 @@ UClass* Z_Construct_UClass_UInteractionPromptWidgetBase()
 	return Z_Registration_Info_UClass_UInteractionPromptWidgetBase.OuterSingleton;
 }
 UInteractionPromptWidgetBase::UInteractionPromptWidgetBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
-DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UInteractionPromptWidgetBase);
+DEFINE_VTABLE_PTR_HELPER_CTOR(UInteractionPromptWidgetBase);
 UInteractionPromptWidgetBase::~UInteractionPromptWidgetBase() {}
 // ********** End Class UInteractionPromptWidgetBase ***********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_Statics
+struct Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInteractionPromptWidgetBase, UInteractionPromptWidgetBase::StaticClass, TEXT("UInteractionPromptWidgetBase"), &Z_Registration_Info_UClass_UInteractionPromptWidgetBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionPromptWidgetBase), 257059064U) },
+		{ Z_Construct_UClass_UInteractionPromptWidgetBase, UInteractionPromptWidgetBase::StaticClass, TEXT("UInteractionPromptWidgetBase"), &Z_Registration_Info_UClass_UInteractionPromptWidgetBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionPromptWidgetBase), 448104532U) },
 	};
-}; // Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_3928678981{
-	TEXT("/Script/InteractionPlugin"),
-	Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_Statics::ClassInfo),
-	nullptr, 0,
-	nullptr, 0,
 };
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_4036846483(TEXT("/Script/InteractionPlugin"),
+	Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionPromptWidgetBase_h__Script_InteractionPlugin_Statics::ClassInfo),
+	nullptr, 0,
+	nullptr, 0);
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

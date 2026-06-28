@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "e:\\unrealengine\\projects\\forvariouscomponents\\plugins\\interactionplugin\\source\\interactionplugin\\private\\interactionplugin.cpp",
+        "Source": "d:\\ue\\perduepapillon\\plugins\\unreal-interaction-plugin-5-\\source\\interactionplugin\\private\\interactionplugin.cpp",
         "ProvidedModule": "",
-        "PCH": "e:\\unrealengine\\projects\\forvariouscomponents\\intermediate\\build\\win64\\x64\\forvariouscomponentseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "PCH": "d:\\ue\\perduepapillon\\intermediate\\build\\win64\\x64\\perduepapilloneditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
-            "e:\\unrealengine\\projects\\forvariouscomponents\\plugins\\interactionplugin\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\interactionplugin\\definitions.interactionplugin.h",
-            "e:\\unrealengine\\projects\\forvariouscomponents\\plugins\\interactionplugin\\source\\interactionplugin\\public\\interactionplugin.h"
+            "d:\\ue\\perduepapillon\\plugins\\unreal-interaction-plugin-5-\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\interactionplugin\\definitions.interactionplugin.h",
+            "d:\\ue\\perduepapillon\\plugins\\unreal-interaction-plugin-5-\\source\\interactionplugin\\public\\interactionplugin.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

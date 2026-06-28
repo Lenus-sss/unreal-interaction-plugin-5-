@@ -8,11 +8,11 @@
 #include "InteractionComponent.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
+
 void EmptyLinkFunctionForGeneratedCodeInteractionComponent() {}
 
 // ********** Begin Cross Module References ********************************************************
-COREUOBJECT_API UClass* Z_Construct_UClass_UClass_NoRegister();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
@@ -50,22 +50,17 @@ struct Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignat
 		{ "EditInline", "true" },
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Delegate FInteractionExecutedSignature constinit property declarations *********
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractionComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Interactor;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Action_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_Action;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Delegate FInteractionExecutedSignature constinit property declarations ***********
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
-
-// ********** Begin Delegate FInteractionExecutedSignature Property Definitions ********************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::NewProp_InteractionComponent = { "InteractionComponent", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_InteractionPlugin_eventInteractionExecutedSignature_Parms, InteractionComponent), Z_Construct_UClass_UInteractionComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionComponent_MetaData), NewProp_InteractionComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::NewProp_Interactor = { "Interactor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_InteractionPlugin_eventInteractionExecutedSignature_Parms, Interactor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::NewProp_Action_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::NewProp_Action = { "Action", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_InteractionPlugin_eventInteractionExecutedSignature_Parms, Action), Z_Construct_UEnum_InteractionPlugin_EInteractionAction, METADATA_PARAMS(0, nullptr) }; // 3376082064
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::NewProp_Action = { "Action", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_InteractionPlugin_eventInteractionExecutedSignature_Parms, Action), Z_Construct_UEnum_InteractionPlugin_EInteractionAction, METADATA_PARAMS(0, nullptr) }; // 292216677
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::NewProp_InteractionComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::NewProp_Interactor,
@@ -73,11 +68,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunctio
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::NewProp_Action,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::PropPointers) < 2048);
-// ********** End Delegate FInteractionExecutedSignature Property Definitions **********************
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_InteractionPlugin, nullptr, "InteractionExecutedSignature__DelegateSignature", 	Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::PropPointers), 
-sizeof(Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::_Script_InteractionPlugin_eventInteractionExecutedSignature_Parms),
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_InteractionPlugin, nullptr, "InteractionExecutedSignature__DelegateSignature", Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::_Script_InteractionPlugin_eventInteractionExecutedSignature_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature_Statics::_Script_InteractionPlugin_eventInteractionExecutedSignature_Parms) < MAX_uint16);
 UFunction* Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature()
 {
@@ -123,16 +114,11 @@ struct Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics
 #endif
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Function CanInteract constinit property declarations ***************************
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Function CanInteract constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-
-// ********** Begin Function CanInteract Property Definitions **************************************
 void Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((InteractionComponent_eventCanInteract_Parms*)Obj)->ReturnValue = 1;
@@ -142,11 +128,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInter
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::PropPointers) < 2048);
-// ********** End Function CanInteract Property Definitions ****************************************
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionComponent, nullptr, "CanInteract", 	Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::PropPointers), 
-sizeof(Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::InteractionComponent_eventCanInteract_Parms),
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionComponent, nullptr, "CanInteract", Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::InteractionComponent_eventCanInteract_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UInteractionComponent_CanInteract_Statics::InteractionComponent_eventCanInteract_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UInteractionComponent_CanInteract()
 {
@@ -185,25 +167,16 @@ struct Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics
 #endif
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Function ExecuteInteraction constinit property declarations ********************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Interactor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Function ExecuteInteraction constinit property declarations **********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-
-// ********** Begin Function ExecuteInteraction Property Definitions *******************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::NewProp_Interactor = { "Interactor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InteractionComponent_eventExecuteInteraction_Parms, Interactor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::NewProp_Interactor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::PropPointers) < 2048);
-// ********** End Function ExecuteInteraction Property Definitions *********************************
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionComponent, nullptr, "ExecuteInteraction", 	Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::PropPointers), 
-sizeof(Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::InteractionComponent_eventExecuteInteraction_Parms),
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionComponent, nullptr, "ExecuteInteraction", Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::InteractionComponent_eventExecuteInteraction_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction_Statics::InteractionComponent_eventExecuteInteraction_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction()
 {
@@ -225,6 +198,15 @@ DEFINE_FUNCTION(UInteractionComponent::execExecuteInteraction)
 // ********** End Class UInteractionComponent Function ExecuteInteraction **************************
 
 // ********** Begin Class UInteractionComponent ****************************************************
+void UInteractionComponent::StaticRegisterNativesUInteractionComponent()
+{
+	UClass* Class = UInteractionComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanInteract", &UInteractionComponent::execCanInteract },
+		{ "ExecuteInteraction", &UInteractionComponent::execExecuteInteraction },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+}
 FClassRegistrationInfo Z_Registration_Info_UClass_UInteractionComponent;
 UClass* UInteractionComponent::GetPrivateStaticClass()
 {
@@ -232,7 +214,7 @@ UClass* UInteractionComponent::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UInteractionComponent.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			TClass::StaticPackage(),
+			StaticPackage(),
 			TEXT("InteractionComponent"),
 			Z_Registration_Info_UClass_UInteractionComponent.InnerSingleton,
 			StaticRegisterNativesUInteractionComponent,
@@ -392,8 +374,6 @@ struct Z_Construct_UClass_UInteractionComponent_Statics
 #endif
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Class UInteractionComponent constinit property declarations ********************
 	static const UECodeGen_Private::FTextPropertyParams NewProp_PromptText;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_InteractionAction_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_InteractionAction;
@@ -412,27 +392,20 @@ struct Z_Construct_UClass_UInteractionComponent_Statics
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnInteractionExecuted;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PromptWidgetComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Class UInteractionComponent constinit property declarations **********************
-	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
-		{ .NameUTF8 = UTF8TEXT("CanInteract"), .Pointer = &UInteractionComponent::execCanInteract },
-		{ .NameUTF8 = UTF8TEXT("ExecuteInteraction"), .Pointer = &UInteractionComponent::execExecuteInteraction },
-	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UInteractionComponent_CanInteract, "CanInteract" }, // 3493524711
-		{ &Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction, "ExecuteInteraction" }, // 2382909958
+		{ &Z_Construct_UFunction_UInteractionComponent_CanInteract, "CanInteract" }, // 1124898898
+		{ &Z_Construct_UFunction_UInteractionComponent_ExecuteInteraction, "ExecuteInteraction" }, // 353308226
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UInteractionComponent>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-}; // struct Z_Construct_UClass_UInteractionComponent_Statics
-
-// ********** Begin Class UInteractionComponent Property Definitions *******************************
+};
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptText = { "PromptText", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptText), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptText_MetaData), NewProp_PromptText_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_InteractionAction_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_InteractionAction = { "InteractionAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, InteractionAction), Z_Construct_UEnum_InteractionPlugin_EInteractionAction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionAction_MetaData), NewProp_InteractionAction_MetaData) }; // 3376082064
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_InteractionAction = { "InteractionAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, InteractionAction), Z_Construct_UEnum_InteractionPlugin_EInteractionAction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionAction_MetaData), NewProp_InteractionAction_MetaData) }; // 292216677
 void Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bCanInteract_SetBit(void* Obj)
 {
 	((UInteractionComponent*)Obj)->bCanInteract = 1;
@@ -443,10 +416,10 @@ void Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bInteractOnlyOnce
 	((UInteractionComponent*)Obj)->bInteractOnlyOnce = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bInteractOnlyOnce = { "bInteractOnlyOnce", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UInteractionComponent), &Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bInteractOnlyOnce_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bInteractOnlyOnce_MetaData), NewProp_bInteractOnlyOnce_MetaData) };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetClass = { "PromptWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptWidgetClass), Z_Construct_UClass_UClass_NoRegister, Z_Construct_UClass_UInteractionPromptWidgetBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptWidgetClass_MetaData), NewProp_PromptWidgetClass_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetClass = { "PromptWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UInteractionPromptWidgetBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptWidgetClass_MetaData), NewProp_PromptWidgetClass_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptRelativeLocation = { "PromptRelativeLocation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptRelativeLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptRelativeLocation_MetaData), NewProp_PromptRelativeLocation_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetSpace_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetSpace = { "PromptWidgetSpace", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptWidgetSpace), Z_Construct_UEnum_UMG_EWidgetSpace, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptWidgetSpace_MetaData), NewProp_PromptWidgetSpace_MetaData) }; // 344449683
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetSpace = { "PromptWidgetSpace", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptWidgetSpace), Z_Construct_UEnum_UMG_EWidgetSpace, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptWidgetSpace_MetaData), NewProp_PromptWidgetSpace_MetaData) }; // 2733937823
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptDrawSize = { "PromptDrawSize", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptDrawSize), Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptDrawSize_MetaData), NewProp_PromptDrawSize_MetaData) };
 void Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bDrawAtDesiredSize_SetBit(void* Obj)
 {
@@ -454,7 +427,7 @@ void Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bDrawAtDesiredSiz
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bDrawAtDesiredSize = { "bDrawAtDesiredSize", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UInteractionComponent), &Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bDrawAtDesiredSize_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bDrawAtDesiredSize_MetaData), NewProp_bDrawAtDesiredSize_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWorldScale = { "PromptWorldScale", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptWorldScale), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptWorldScale_MetaData), NewProp_PromptWorldScale_MetaData) };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_OnInteractionExecuted = { "OnInteractionExecuted", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, OnInteractionExecuted), Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnInteractionExecuted_MetaData), NewProp_OnInteractionExecuted_MetaData) }; // 379076242
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_OnInteractionExecuted = { "OnInteractionExecuted", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, OnInteractionExecuted), Z_Construct_UDelegateFunction_InteractionPlugin_InteractionExecutedSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnInteractionExecuted_MetaData), NewProp_OnInteractionExecuted_MetaData) }; // 3859576688
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetComponent = { "PromptWidgetComponent", nullptr, (EPropertyFlags)0x0144000000082008, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptWidgetComponent), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptWidgetComponent_MetaData), NewProp_PromptWidgetComponent_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInteractionComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptText,
@@ -473,7 +446,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInteract
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetComponent,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractionComponent_Statics::PropPointers) < 2048);
-// ********** End Class UInteractionComponent Property Definitions *********************************
 UObject* (*const Z_Construct_UClass_UInteractionComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UActorComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_InteractionPlugin,
@@ -494,11 +466,6 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UInteractionComponent_S
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractionComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UInteractionComponent_Statics::Class_MetaDataParams)
 };
-void UInteractionComponent::StaticRegisterNativesUInteractionComponent()
-{
-	UClass* Class = UInteractionComponent::StaticClass();
-	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UInteractionComponent_Statics::Funcs));
-}
 UClass* Z_Construct_UClass_UInteractionComponent()
 {
 	if (!Z_Registration_Info_UClass_UInteractionComponent.OuterSingleton)
@@ -507,23 +474,21 @@ UClass* Z_Construct_UClass_UInteractionComponent()
 	}
 	return Z_Registration_Info_UClass_UInteractionComponent.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UInteractionComponent);
+DEFINE_VTABLE_PTR_HELPER_CTOR(UInteractionComponent);
 UInteractionComponent::~UInteractionComponent() {}
 // ********** End Class UInteractionComponent ******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics
+struct Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInteractionComponent, UInteractionComponent::StaticClass, TEXT("UInteractionComponent"), &Z_Registration_Info_UClass_UInteractionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionComponent), 1504390600U) },
+		{ Z_Construct_UClass_UInteractionComponent, UInteractionComponent::StaticClass, TEXT("UInteractionComponent"), &Z_Registration_Info_UClass_UInteractionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionComponent), 604700797U) },
 	};
-}; // Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_756929061{
-	TEXT("/Script/InteractionPlugin"),
-	Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics::ClassInfo),
-	nullptr, 0,
-	nullptr, 0,
 };
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_2799744351(TEXT("/Script/InteractionPlugin"),
+	Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics::ClassInfo),
+	nullptr, 0,
+	nullptr, 0);
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,12 +1,14 @@
-"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Source/InteractionPlugin/Private/InteractionPromptWidgetBase.cpp"
-@"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPlugin.Shared.rsp"
-/FI"E:/UnrealEngine/Projects/ForVariousComponents/Intermediate/Build/Win64/x64/ForVariousComponentsEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/FI"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/Definitions.InteractionPlugin.h"
-/Yu"E:/UnrealEngine/Projects/ForVariousComponents/Intermediate/Build/Win64/x64/ForVariousComponentsEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
-/Fp"E:/UnrealEngine/Projects/ForVariousComponents/Intermediate/Build/Win64/x64/ForVariousComponentsEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
-/Fo"E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPromptWidgetBase.cpp.obj"
-/experimental:log "E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPromptWidgetBase.cpp.sarif"
-/sourceDependencies "E:/UnrealEngine/Projects/ForVariousComponents/Plugins/InteractionPlugin/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPromptWidgetBase.cpp.dep.json"
+"D:/UE/PerduePapillon/Plugins/unreal-interaction-plugin-5-/Source/InteractionPlugin/Private/InteractionPromptWidgetBase.cpp"
+@"D:/UE/PerduePapillon/Plugins/unreal-interaction-plugin-5-/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPlugin.Shared.rsp"
+/FI"D:/UE/PerduePapillon/Intermediate/Build/Win64/x64/PerduePapillonEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/FI"D:/UE/PerduePapillon/Plugins/unreal-interaction-plugin-5-/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/Definitions.InteractionPlugin.h"
+/Yu"D:/UE/PerduePapillon/Intermediate/Build/Win64/x64/PerduePapillonEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h"
+/Fp"D:/UE/PerduePapillon/Intermediate/Build/Win64/x64/PerduePapillonEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.pch"
+/Fo"D:/UE/PerduePapillon/Plugins/unreal-interaction-plugin-5-/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPromptWidgetBase.cpp.obj"
+/experimental:log "D:/UE/PerduePapillon/Plugins/unreal-interaction-plugin-5-/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPromptWidgetBase.cpp.sarif"
+/sourceDependencies "D:/UE/PerduePapillon/Plugins/unreal-interaction-plugin-5-/Intermediate/Build/Win64/x64/UnrealEditor/Development/InteractionPlugin/InteractionPromptWidgetBase.cpp.dep.json"
+/d2ssa-cfg-question-
+/Zc:inline
 /nologo
 /Oi
 /FC
@@ -20,8 +22,6 @@
 /permissive-
 /Zc:strictStrings-
 /Zc:__cplusplus
-/Zc:inline
-/Zc:preprocessor
 /D_CRT_STDIO_LEGACY_WIDE_SPECIFIERS=1
 /D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1
 /D_WINDLL
@@ -46,10 +46,8 @@
 /we4459
 /wd4244
 /wd4838
-/we4668
-/wd4267
-/wd4100
 /TP
 /GR-
 /std:c++20
+/Zc:preprocessor
 /wd5054

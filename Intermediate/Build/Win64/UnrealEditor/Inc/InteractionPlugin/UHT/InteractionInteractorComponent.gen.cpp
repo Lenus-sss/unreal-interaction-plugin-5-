@@ -8,7 +8,7 @@
 #include "InteractionInteractorComponent.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
+
 void EmptyLinkFunctionForGeneratedCodeInteractionInteractorComponent() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -42,25 +42,16 @@ struct Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteracti
 		{ "EditInline", "true" },
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Function GetFocusedInteraction constinit property declarations *****************
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Function GetFocusedInteraction constinit property declarations *******************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-
-// ********** Begin Function GetFocusedInteraction Property Definitions ****************************
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(InteractionInteractorComponent_eventGetFocusedInteraction_Parms, ReturnValue), Z_Construct_UClass_UInteractionComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::PropPointers) < 2048);
-// ********** End Function GetFocusedInteraction Property Definitions ******************************
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionInteractorComponent, nullptr, "GetFocusedInteraction", 	Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::PropPointers), 
-sizeof(Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::InteractionInteractorComponent_eventGetFocusedInteraction_Parms),
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionInteractorComponent, nullptr, "GetFocusedInteraction", Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::PropPointers), sizeof(Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::InteractionInteractorComponent_eventGetFocusedInteraction_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction_Statics::InteractionInteractorComponent_eventGetFocusedInteraction_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction()
 {
@@ -95,15 +86,9 @@ struct Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract_Statics
 #endif
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Function TryInteract constinit property declarations ***************************
-// ********** End Function TryInteract constinit property declarations *****************************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionInteractorComponent, nullptr, "TryInteract", 	nullptr, 
-	0, 
-0,
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UInteractionInteractorComponent, nullptr, "TryInteract", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract_Statics::Function_MetaDataParams), Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -123,6 +108,15 @@ DEFINE_FUNCTION(UInteractionInteractorComponent::execTryInteract)
 // ********** End Class UInteractionInteractorComponent Function TryInteract ***********************
 
 // ********** Begin Class UInteractionInteractorComponent ******************************************
+void UInteractionInteractorComponent::StaticRegisterNativesUInteractionInteractorComponent()
+{
+	UClass* Class = UInteractionInteractorComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetFocusedInteraction", &UInteractionInteractorComponent::execGetFocusedInteraction },
+		{ "TryInteract", &UInteractionInteractorComponent::execTryInteract },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+}
 FClassRegistrationInfo Z_Registration_Info_UClass_UInteractionInteractorComponent;
 UClass* UInteractionInteractorComponent::GetPrivateStaticClass()
 {
@@ -130,7 +124,7 @@ UClass* UInteractionInteractorComponent::GetPrivateStaticClass()
 	if (!Z_Registration_Info_UClass_UInteractionInteractorComponent.InnerSingleton)
 	{
 		GetPrivateStaticClassBody(
-			TClass::StaticPackage(),
+			StaticPackage(),
 			TEXT("InteractionInteractorComponent"),
 			Z_Registration_Info_UClass_UInteractionInteractorComponent.InnerSingleton,
 			StaticRegisterNativesUInteractionInteractorComponent,
@@ -177,6 +171,17 @@ struct Z_Construct_UClass_UInteractionInteractorComponent_Statics
 		{ "ToolTip", "\xe4\xbb\x8e\xe7\x9b\xb8\xe6\x9c\xba\xe4\xb8\xad\xe5\xbf\x83\xe5\x90\x91\xe5\x89\x8d\xe6\xa3\x80\xe6\xb5\x8b\xe7\x9a\x84\xe6\x9c\x80\xe5\xa4\xa7\xe8\xb7\x9d\xe7\xa6\xbb\xef\xbc\x8c\xe5\x8d\x95\xe4\xbd\x8d\xe4\xb8\xba Unreal Units\xe3\x80\x82" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractionTraceRadius_MetaData[] = {
+		{ "Category", "Interaction" },
+		{ "ClampMin", "0.0" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** \xe5\x87\x86\xe5\xbf\x83\xe6\x89\xab\xe6\x8f\x8f\xe5\x8d\x8a\xe5\xbe\x84\xef\xbc\x8c\xe5\x8d\x95\xe4\xbd\x8d\xe4\xb8\xba Unreal Units\xef\xbc\x9b\xe8\xae\xbe\xe4\xb8\xba 0 \xe6\x97\xb6\xe9\x80\x80\xe5\x9b\x9e\xe7\xb2\xbe\xe7\xa1\xae\xe7\xba\xbf\xe6\xa3\x80\xe6\xb5\x8b\xe3\x80\x82 */" },
+#endif
+		{ "ModuleRelativePath", "Public/InteractionInteractorComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\x87\x86\xe5\xbf\x83\xe6\x89\xab\xe6\x8f\x8f\xe5\x8d\x8a\xe5\xbe\x84\xef\xbc\x8c\xe5\x8d\x95\xe4\xbd\x8d\xe4\xb8\xba Unreal Units\xef\xbc\x9b\xe8\xae\xbe\xe4\xb8\xba 0 \xe6\x97\xb6\xe9\x80\x80\xe5\x9b\x9e\xe7\xb2\xbe\xe7\xa1\xae\xe7\xba\xbf\xe6\xa3\x80\xe6\xb5\x8b\xe3\x80\x82" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TraceChannel_MetaData[] = {
 		{ "Category", "Interaction" },
 #if !UE_BUILD_SHIPPING
@@ -208,35 +213,28 @@ struct Z_Construct_UClass_UInteractionInteractorComponent_Statics
 #endif
 	};
 #endif // WITH_METADATA
-
-// ********** Begin Class UInteractionInteractorComponent constinit property declarations **********
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_InteractionDistance;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InteractionTraceRadius;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_TraceChannel;
 	static void NewProp_bUseRawEKey_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseRawEKey;
 	static void NewProp_bDebugTrace_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bDebugTrace;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-// ********** End Class UInteractionInteractorComponent constinit property declarations ************
-	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
-		{ .NameUTF8 = UTF8TEXT("GetFocusedInteraction"), .Pointer = &UInteractionInteractorComponent::execGetFocusedInteraction },
-		{ .NameUTF8 = UTF8TEXT("TryInteract"), .Pointer = &UInteractionInteractorComponent::execTryInteract },
-	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction, "GetFocusedInteraction" }, // 2012342897
-		{ &Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract, "TryInteract" }, // 2737975404
+		{ &Z_Construct_UFunction_UInteractionInteractorComponent_GetFocusedInteraction, "GetFocusedInteraction" }, // 68598070
+		{ &Z_Construct_UFunction_UInteractionInteractorComponent_TryInteract, "TryInteract" }, // 2073514589
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UInteractionInteractorComponent>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
-}; // struct Z_Construct_UClass_UInteractionInteractorComponent_Statics
-
-// ********** Begin Class UInteractionInteractorComponent Property Definitions *********************
+};
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionDistance = { "InteractionDistance", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionInteractorComponent, InteractionDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionDistance_MetaData), NewProp_InteractionDistance_MetaData) };
-const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_TraceChannel = { "TraceChannel", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionInteractorComponent, TraceChannel), Z_Construct_UEnum_Engine_ECollisionChannel, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TraceChannel_MetaData), NewProp_TraceChannel_MetaData) }; // 838391399
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionTraceRadius = { "InteractionTraceRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionInteractorComponent, InteractionTraceRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionTraceRadius_MetaData), NewProp_InteractionTraceRadius_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_TraceChannel = { "TraceChannel", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionInteractorComponent, TraceChannel), Z_Construct_UEnum_Engine_ECollisionChannel, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TraceChannel_MetaData), NewProp_TraceChannel_MetaData) }; // 756624936
 void Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bUseRawEKey_SetBit(void* Obj)
 {
 	((UInteractionInteractorComponent*)Obj)->bUseRawEKey = 1;
@@ -249,12 +247,12 @@ void Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bDebugT
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bDebugTrace = { "bDebugTrace", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UInteractionInteractorComponent), &Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bDebugTrace_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bDebugTrace_MetaData), NewProp_bDebugTrace_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInteractionInteractorComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionDistance,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionTraceRadius,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_TraceChannel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bUseRawEKey,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bDebugTrace,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractionInteractorComponent_Statics::PropPointers) < 2048);
-// ********** End Class UInteractionInteractorComponent Property Definitions ***********************
 UObject* (*const Z_Construct_UClass_UInteractionInteractorComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UActorComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_InteractionPlugin,
@@ -275,11 +273,6 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UInteractionInteractorC
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UInteractionInteractorComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UInteractionInteractorComponent_Statics::Class_MetaDataParams)
 };
-void UInteractionInteractorComponent::StaticRegisterNativesUInteractionInteractorComponent()
-{
-	UClass* Class = UInteractionInteractorComponent::StaticClass();
-	FNativeFunctionRegistrar::RegisterFunctions(Class, MakeConstArrayView(Z_Construct_UClass_UInteractionInteractorComponent_Statics::Funcs));
-}
 UClass* Z_Construct_UClass_UInteractionInteractorComponent()
 {
 	if (!Z_Registration_Info_UClass_UInteractionInteractorComponent.OuterSingleton)
@@ -288,23 +281,21 @@ UClass* Z_Construct_UClass_UInteractionInteractorComponent()
 	}
 	return Z_Registration_Info_UClass_UInteractionInteractorComponent.OuterSingleton;
 }
-DEFINE_VTABLE_PTR_HELPER_CTOR_NS(, UInteractionInteractorComponent);
+DEFINE_VTABLE_PTR_HELPER_CTOR(UInteractionInteractorComponent);
 UInteractionInteractorComponent::~UInteractionInteractorComponent() {}
 // ********** End Class UInteractionInteractorComponent ********************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics
+struct Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInteractionInteractorComponent, UInteractionInteractorComponent::StaticClass, TEXT("UInteractionInteractorComponent"), &Z_Registration_Info_UClass_UInteractionInteractorComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionInteractorComponent), 2459220378U) },
+		{ Z_Construct_UClass_UInteractionInteractorComponent, UInteractionInteractorComponent::StaticClass, TEXT("UInteractionInteractorComponent"), &Z_Registration_Info_UClass_UInteractionInteractorComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionInteractorComponent), 1138024177U) },
 	};
-}; // Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_235930083{
-	TEXT("/Script/InteractionPlugin"),
-	Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics::ClassInfo),
-	nullptr, 0,
-	nullptr, 0,
 };
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_1933441562(TEXT("/Script/InteractionPlugin"),
+	Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics::ClassInfo),
+	nullptr, 0,
+	nullptr, 0);
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

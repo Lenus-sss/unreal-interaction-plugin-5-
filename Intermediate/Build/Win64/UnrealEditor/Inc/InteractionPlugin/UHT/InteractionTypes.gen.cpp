@@ -8,7 +8,7 @@
 #include "InteractionTypes.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");
+
 void EmptyLinkFunctionForGeneratedCodeInteractionTypes() {}
 
 // ********** Begin Cross Module References ********************************************************
@@ -26,7 +26,7 @@ static UEnum* EInteractionAction_StaticEnum()
 	}
 	return Z_Registration_Info_UEnum_EInteractionAction.OuterSingleton;
 }
-template<> INTERACTIONPLUGIN_NON_ATTRIBUTED_API UEnum* StaticEnum<EInteractionAction>()
+template<> INTERACTIONPLUGIN_API UEnum* StaticEnum<EInteractionAction>()
 {
 	return EInteractionAction_StaticEnum();
 }
@@ -57,7 +57,7 @@ struct Z_Construct_UEnum_InteractionPlugin_EInteractionAction_Statics
 		{ "EInteractionAction::PrintTwoCharacters", (int64)EInteractionAction::PrintTwoCharacters },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
-}; // struct Z_Construct_UEnum_InteractionPlugin_EInteractionAction_Statics 
+};
 const UECodeGen_Private::FEnumParams Z_Construct_UEnum_InteractionPlugin_EInteractionAction_Statics::EnumParams = {
 	(UObject*(*)())Z_Construct_UPackage__Script_InteractionPlugin,
 	nullptr,
@@ -81,18 +81,16 @@ UEnum* Z_Construct_UEnum_InteractionPlugin_EInteractionAction()
 // ********** End Enum EInteractionAction **********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_Statics
+struct Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EInteractionAction_StaticEnum, TEXT("EInteractionAction"), &Z_Registration_Info_UEnum_EInteractionAction, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3376082064U) },
+		{ EInteractionAction_StaticEnum, TEXT("EInteractionAction"), &Z_Registration_Info_UEnum_EInteractionAction, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 292216677U) },
 	};
-}; // Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_529448257{
-	TEXT("/Script/InteractionPlugin"),
-	nullptr, 0,
-	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Projects_ForVariousComponents_Plugins_InteractionPlugin_Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_Statics::EnumInfo),
 };
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_1633811986(TEXT("/Script/InteractionPlugin"),
+	nullptr, 0,
+	nullptr, 0,
+	Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionTypes_h__Script_InteractionPlugin_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
