@@ -2,6 +2,7 @@
 
 #include "InteractionComponent.h"
 #include "DrawDebugHelpers.h"
+#include "EngineUtils.h"
 #include "GameFramework/Pawn.h"
 #include "GameFramework/PlayerController.h"
 #include "InputCoreTypes.h"
@@ -60,49 +61,16 @@ void UInteractionInteractorComponent::TickComponent(float DeltaTime, ELevelTick 
 		return;
 	}
 
-	// 以相机前向量和配置距离计算准心射线终点。
-	const FVector TraceEnd = ViewLocation + ViewRotation.Vector() * InteractionDistance;
-	// 创建查询参数并忽略玩家自身，避免射线先命中角色碰撞体。
-	FCollisionQueryParams QueryParams(SCENE_QUERY_STAT(InteractionTrace), false, OwningPawn);
-	// 保存射线命中信息，便于随后取得命中 Actor。
-	FHitResult Hit;
-	// 默认本帧没有交互焦点，只有命中有效交互组件时才赋值。
-	UInteractionComponent* NewFocusedInteraction = nullptr;
-
-	// 半径大于 0 时使用球形扫描，给准心交互一点容错范围。
-	const bool bHitInteractionTrace = InteractionTraceRadius > 0.0f
-		? GetWorld()->SweepSingleByChannel(
-			Hit,
-			ViewLocation,
-			TraceEnd,
-			FQuat::Identity,
-			TraceChannel,
-			FCollisionShape::MakeSphere(InteractionTraceRadius),
-			QueryParams)
-		: GetWorld()->LineTraceSingleByChannel(Hit, ViewLocation, TraceEnd, TraceChannel, QueryParams);
-
-	// 使用配置的碰撞通道从相机向准心方向执行一次交互检测。
-	if (bHitInteractionTrace)
-	{
-		// 射线命中后先取得实际被命中的 Actor。
-		if (AActor* HitActor = Hit.GetActor())
-		{
-			// 在命中 Actor 上寻找可交互组件，而不是要求 Actor 继承特定父类。
-			UInteractionComponent* Candidate = HitActor->FindComponentByClass<UInteractionComponent>();
-			// 只有组件存在且当前允许交互时，才将其作为新焦点。
-			if (Candidate && Candidate->CanInteract())
-			{
-				// 保存候选组件，稍后统一处理焦点切换。
-				NewFocusedInteraction = Candidate;
-			}
-		}
-	}
+	// 在以准心为轴的窄锥里挑选最佳交互物，避免球形扫管导致侧边物体被误吸附。
+	UInteractionComponent* NewFocusedInteraction = FindBestInteractionInCone(ViewLocation, ViewRotation, OwningPawn);
 
 	// 开发调试时绘制准心射线，颜色反映本帧是否找到有效交互物。
 	if (bDebugTrace)
 	{
-		// 命中有效交互物使用绿色，否则使用红色；生命周期为单帧。
-		DrawDebugLine(GetWorld(), ViewLocation, TraceEnd, NewFocusedInteraction ? FColor::Green : FColor::Red, false, 0.0f, 0, 1.0f);
+		// 命中有效交互物使用绿色，否则使用红色；锥体轮廓生命周期为单帧。
+		const FVector ConeDirection = ViewRotation.Vector();
+		const float ConeHalfAngleRadians = FMath::DegreesToRadians(InteractionConeHalfAngleDegrees);
+		DrawDebugCone(GetWorld(), ViewLocation, ConeDirection, InteractionDistance, ConeHalfAngleRadians, ConeHalfAngleRadians, 24, NewFocusedInteraction ? FColor::Green : FColor::Red, false, 0.0f, 0, 1.0f);
 	}
 
 	// 对比新旧焦点并只在变化时执行提示隐藏或显示。
@@ -170,6 +138,84 @@ bool UInteractionInteractorComponent::GetPlayerView(FVector& OutLocation, FRotat
 	OwningPawn->GetActorEyesViewPoint(OutLocation, OutRotation);
 	// 回退视点同样可用于继续射线检测。
 	return true;
+}
+
+UInteractionComponent* UInteractionInteractorComponent::FindBestInteractionInCone(const FVector& ViewLocation, const FRotator& ViewRotation, const APawn* OwningPawn) const
+{
+	// 没有世界或玩家时无法可靠扫描交互物。
+	UWorld* World = GetWorld();
+	if (!World || !OwningPawn)
+	{
+		return nullptr;
+	}
+
+	// 准星方向是锥体轴线，所有候选都要和它比较夹角。
+	const FVector ViewDirection = ViewRotation.Vector();
+	// 将半角转成余弦值，后续用点积判断是否落在锥体内。
+	const float MinConeDot = FMath::Cos(FMath::DegreesToRadians(InteractionConeHalfAngleDegrees));
+	// 分数越小越接近准星中心；距离作为次要因素，避免同角度时选太远的物体。
+	float BestScore = TNumericLimits<float>::Max();
+	UInteractionComponent* BestInteraction = nullptr;
+
+	// 遍历场景 Actor 查找交互组件；小项目里成本可控，并且比粗球扫更符合准星语义。
+	for (TActorIterator<AActor> ActorIt(World); ActorIt; ++ActorIt)
+	{
+		AActor* CandidateActor = *ActorIt;
+		if (!CandidateActor || CandidateActor == OwningPawn)
+		{
+			continue;
+		}
+
+		UInteractionComponent* CandidateInteraction = CandidateActor->FindComponentByClass<UInteractionComponent>();
+		if (!CandidateInteraction || !CandidateInteraction->CanInteract())
+		{
+			continue;
+		}
+
+		// 使用 Actor Bounds 中心作为瞄准点，能兼容小摆件、门等普通可交互物。
+		FVector BoundsOrigin;
+		FVector BoundsExtent;
+		CandidateActor->GetActorBounds(false, BoundsOrigin, BoundsExtent);
+
+		const FVector ToCandidate = BoundsOrigin - ViewLocation;
+		const float DistanceToCandidate = ToCandidate.Size();
+		if (DistanceToCandidate <= KINDA_SMALL_NUMBER || DistanceToCandidate > InteractionDistance)
+		{
+			continue;
+		}
+
+		const FVector DirectionToCandidate = ToCandidate / DistanceToCandidate;
+		const float CandidateDot = FVector::DotProduct(ViewDirection, DirectionToCandidate);
+		const float CandidateAngleRadians = FMath::Acos(FMath::Clamp(CandidateDot, -1.0f, 1.0f));
+		const float ConeHalfAngleRadians = FMath::DegreesToRadians(InteractionConeHalfAngleDegrees);
+		const float BoundsRadius = BoundsExtent.Size();
+		const float AngularRadiusRadians = FMath::Asin(FMath::Clamp(BoundsRadius / DistanceToCandidate, 0.0f, 1.0f));
+		if (CandidateDot < MinConeDot && CandidateAngleRadians > ConeHalfAngleRadians + AngularRadiusRadians)
+		{
+			continue;
+		}
+
+		// 用一次细线检测确认没有墙、桌面等阻挡物在玩家和候选物之间。
+		FHitResult LineHit;
+		FCollisionQueryParams QueryParams(SCENE_QUERY_STAT(InteractionConeLineOfSight), false, OwningPawn);
+		const bool bHitBlockingObject = World->LineTraceSingleByChannel(LineHit, ViewLocation, BoundsOrigin, TraceChannel, QueryParams);
+		if (bHitBlockingObject && LineHit.GetActor() != CandidateActor)
+		{
+			continue;
+		}
+
+		// 用“偏离锥体中心的角度”评分，并扣除物体自身角半径，让瞄到物体边缘也能稳定选中。
+		const float AngularScore = FMath::Max(0.0f, CandidateAngleRadians - AngularRadiusRadians);
+		const float DistanceScore = DistanceToCandidate / FMath::Max(1.0f, InteractionDistance);
+		const float CandidateScore = AngularScore * 100.0f + DistanceScore;
+		if (CandidateScore < BestScore)
+		{
+			BestScore = CandidateScore;
+			BestInteraction = CandidateInteraction;
+		}
+	}
+
+	return BestInteraction;
 }
 
 void UInteractionInteractorComponent::UpdateFocusedInteraction(UInteractionComponent* NewFocusedInteraction)

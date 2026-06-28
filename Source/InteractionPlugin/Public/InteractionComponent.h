@@ -8,6 +8,7 @@
 
 class UInteractionComponent;
 class UInteractionPromptWidgetBase;
+class USceneComponent;
 
 /** 成功执行交互后广播，携带交互组件、执行者和实际交互类型。 */
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FInteractionExecutedSignature, UInteractionComponent*, InteractionComponent, AActor*, Interactor, EInteractionAction, Action);
@@ -54,6 +55,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Prompt")
 	FVector PromptRelativeLocation = FVector(0.0, 0.0, 100.0);
 
+	/** 开启后根据拥有者包围盒自动把提示放到物体中心，适合小物件上的准心提示。 */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Prompt")
+	bool bAutoPlacePromptAtOwnerCenter = true;
+
 	/** 指定提示 Widget 使用 World 还是 Screen 空间；Screen 默认不会被门板深度遮挡。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Prompt")
 	EWidgetSpace PromptWidgetSpace = EWidgetSpace::Screen;
@@ -91,6 +96,8 @@ public:
 private:
 	/** 根据编辑器配置动态创建并注册物体上方的 WidgetComponent。 */
 	void CreatePromptWidget();
+	/** 计算提示组件相对根组件的位置；自动模式会放到拥有者包围盒中心。 */
+	FVector CalculatePromptRelativeLocation(const USceneComponent* RootComponent) const;
 	/** 把组件和提示文本同步给已创建的 Widget 实例。 */
 	void UpdatePromptWidget();
 

@@ -5,6 +5,7 @@
 #include "Engine/EngineTypes.h"
 #include "InteractionInteractorComponent.generated.h"
 
+class APawn;
 class UInteractionComponent;
 
 /**
@@ -29,11 +30,11 @@ public:
 
 	/** 从相机中心向前检测的最大距离，单位为 Unreal Units。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
-	float InteractionDistance = 500.0f;
+	float InteractionDistance = 300.0f;
 
-	/** 准心扫描半径，单位为 Unreal Units；设为 0 时退回精确线检测。 */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction", meta = (ClampMin = "0.0"))
-	float InteractionTraceRadius = 35.0f;
+	/** 以准心方向为轴的交互锥半角，角度越小越要求玩家准确看向物体。 */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction", meta = (ClampMin = "0.1", ClampMax = "20.0"))
+	float InteractionConeHalfAngleDegrees = 3.0f;
 
 	/** 射线检测使用的碰撞通道；默认要求物品阻挡 Visibility。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
@@ -43,7 +44,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
 	bool bUseRawEKey = true;
 
-	/** 开启后绘制本帧准心射线，绿色代表锁定交互物，红色代表未锁定。 */
+	/** 开启后绘制本帧准心交互锥，绿色代表锁定交互物，红色代表未锁定。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Debug")
 	bool bDebugTrace = false;
 
@@ -58,6 +59,8 @@ public:
 private:
 	/** 获取玩家控制器实际使用的相机位置与旋转，用作射线起点与方向。 */
 	bool GetPlayerView(FVector& OutLocation, FRotator& OutRotation) const;
+	/** 在准心锥体内寻找最接近准星中心、且没有被墙体遮挡的交互组件。 */
+	UInteractionComponent* FindBestInteractionInCone(const FVector& ViewLocation, const FRotator& ViewRotation, const APawn* OwningPawn) const;
 	/** 在焦点对象变化时隐藏旧提示并显示新提示。 */
 	void UpdateFocusedInteraction(UInteractionComponent* NewFocusedInteraction);
 

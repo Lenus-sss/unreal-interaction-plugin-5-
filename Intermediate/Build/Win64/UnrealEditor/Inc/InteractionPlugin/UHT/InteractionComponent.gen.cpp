@@ -311,6 +311,16 @@ struct Z_Construct_UClass_UInteractionComponent_Statics
 		{ "ToolTip", "\xe6\x8f\x90\xe7\xa4\xba\xe7\x9b\xb8\xe5\xaf\xb9\xe6\x8b\xa5\xe6\x9c\x89\xe8\x80\x85\xe6\xa0\xb9\xe7\xbb\x84\xe4\xbb\xb6\xe7\x9a\x84\xe4\xbd\x8d\xe7\xbd\xae\xef\xbc\x8c\xe9\x80\x9a\xe5\xb8\xb8\xe8\xae\xbe\xe7\xbd\xae\xe4\xb8\xba\xe7\x89\xa9\xe4\xbd\x93\xe4\xb8\x8a\xe6\x96\xb9\xe3\x80\x82" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bAutoPlacePromptAtOwnerCenter_MetaData[] = {
+		{ "Category", "Interaction|Prompt" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** \xe5\xbc\x80\xe5\x90\xaf\xe5\x90\x8e\xe6\xa0\xb9\xe6\x8d\xae\xe6\x8b\xa5\xe6\x9c\x89\xe8\x80\x85\xe5\x8c\x85\xe5\x9b\xb4\xe7\x9b\x92\xe8\x87\xaa\xe5\x8a\xa8\xe6\x8a\x8a\xe6\x8f\x90\xe7\xa4\xba\xe6\x94\xbe\xe5\x88\xb0\xe7\x89\xa9\xe4\xbd\x93\xe4\xb8\xad\xe5\xbf\x83\xef\xbc\x8c\xe9\x80\x82\xe5\x90\x88\xe5\xb0\x8f\xe7\x89\xa9\xe4\xbb\xb6\xe4\xb8\x8a\xe7\x9a\x84\xe5\x87\x86\xe5\xbf\x83\xe6\x8f\x90\xe7\xa4\xba\xe3\x80\x82 */" },
+#endif
+		{ "ModuleRelativePath", "Public/InteractionComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xe5\xbc\x80\xe5\x90\xaf\xe5\x90\x8e\xe6\xa0\xb9\xe6\x8d\xae\xe6\x8b\xa5\xe6\x9c\x89\xe8\x80\x85\xe5\x8c\x85\xe5\x9b\xb4\xe7\x9b\x92\xe8\x87\xaa\xe5\x8a\xa8\xe6\x8a\x8a\xe6\x8f\x90\xe7\xa4\xba\xe6\x94\xbe\xe5\x88\xb0\xe7\x89\xa9\xe4\xbd\x93\xe4\xb8\xad\xe5\xbf\x83\xef\xbc\x8c\xe9\x80\x82\xe5\x90\x88\xe5\xb0\x8f\xe7\x89\xa9\xe4\xbb\xb6\xe4\xb8\x8a\xe7\x9a\x84\xe5\x87\x86\xe5\xbf\x83\xe6\x8f\x90\xe7\xa4\xba\xe3\x80\x82" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PromptWidgetSpace_MetaData[] = {
 		{ "Category", "Interaction|Prompt" },
 #if !UE_BUILD_SHIPPING
@@ -383,6 +393,8 @@ struct Z_Construct_UClass_UInteractionComponent_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bInteractOnlyOnce;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_PromptWidgetClass;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_PromptRelativeLocation;
+	static void NewProp_bAutoPlacePromptAtOwnerCenter_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bAutoPlacePromptAtOwnerCenter;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_PromptWidgetSpace_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_PromptWidgetSpace;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_PromptDrawSize;
@@ -418,6 +430,11 @@ void Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bInteractOnlyOnce
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bInteractOnlyOnce = { "bInteractOnlyOnce", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UInteractionComponent), &Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bInteractOnlyOnce_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bInteractOnlyOnce_MetaData), NewProp_bInteractOnlyOnce_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetClass = { "PromptWidgetClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UInteractionPromptWidgetBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptWidgetClass_MetaData), NewProp_PromptWidgetClass_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptRelativeLocation = { "PromptRelativeLocation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptRelativeLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptRelativeLocation_MetaData), NewProp_PromptRelativeLocation_MetaData) };
+void Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bAutoPlacePromptAtOwnerCenter_SetBit(void* Obj)
+{
+	((UInteractionComponent*)Obj)->bAutoPlacePromptAtOwnerCenter = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bAutoPlacePromptAtOwnerCenter = { "bAutoPlacePromptAtOwnerCenter", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UInteractionComponent), &Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bAutoPlacePromptAtOwnerCenter_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bAutoPlacePromptAtOwnerCenter_MetaData), NewProp_bAutoPlacePromptAtOwnerCenter_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetSpace_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetSpace = { "PromptWidgetSpace", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptWidgetSpace), Z_Construct_UEnum_UMG_EWidgetSpace, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptWidgetSpace_MetaData), NewProp_PromptWidgetSpace_MetaData) }; // 2733937823
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptDrawSize = { "PromptDrawSize", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionComponent, PromptDrawSize), Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PromptDrawSize_MetaData), NewProp_PromptDrawSize_MetaData) };
@@ -437,6 +454,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInteract
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bInteractOnlyOnce,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptRelativeLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_bAutoPlacePromptAtOwnerCenter,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetSpace_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptWidgetSpace,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionComponent_Statics::NewProp_PromptDrawSize,
@@ -482,10 +500,10 @@ UInteractionComponent::~UInteractionComponent() {}
 struct Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInteractionComponent, UInteractionComponent::StaticClass, TEXT("UInteractionComponent"), &Z_Registration_Info_UClass_UInteractionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionComponent), 303696973U) },
+		{ Z_Construct_UClass_UInteractionComponent, UInteractionComponent::StaticClass, TEXT("UInteractionComponent"), &Z_Registration_Info_UClass_UInteractionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionComponent), 1493419992U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_2920155259(TEXT("/Script/InteractionPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_1558548675(TEXT("/Script/InteractionPlugin"),
 	Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionComponent_h__Script_InteractionPlugin_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -151,8 +151,8 @@ void UInteractionComponent::CreatePromptWidget()
 	GetOwner()->AddInstanceComponent(PromptWidgetComponent);
 	// 把提示附着到根组件，使物品移动时提示同步移动。
 	PromptWidgetComponent->SetupAttachment(RootComponent);
-	// 应用配置的上方偏移位置。
-	PromptWidgetComponent->SetRelativeLocation(PromptRelativeLocation);
+	// 应用提示位置；自动模式会放在拥有者包围盒中心，手动模式使用配置偏移。
+	PromptWidgetComponent->SetRelativeLocation(CalculatePromptRelativeLocation(RootComponent));
 	// 应用 World 或 Screen 空间配置。
 	PromptWidgetComponent->SetWidgetSpace(PromptWidgetSpace);
 	// 使用透明混合，避免 Widget 背景在场景里显示成突兀的灰色矩形。
@@ -161,7 +161,7 @@ void UInteractionComponent::CreatePromptWidget()
 	PromptWidgetComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	// 交互提示不需要接收键鼠焦点，输入仍交给玩家控制器处理。
 	PromptWidgetComponent->SetWindowFocusable(false);
-	// 居中对齐投影位置，让 Screen 空间提示稳定贴在目标上方。
+	// 中心对齐投影位置，让提示 Widget 的中心落在物体中心。
 	PromptWidgetComponent->SetPivot(FVector2D(0.5f, 0.5f));
 	// 仅对 World 空间提示应用物理缩放，避免影响屏幕空间 Widget 的屏幕尺寸。
 	if (PromptWidgetSpace == EWidgetSpace::World)
@@ -181,6 +181,23 @@ void UInteractionComponent::CreatePromptWidget()
 	PromptWidgetComponent->RegisterComponent();
 	// 注册完成后同步文本和来源组件到刚创建的 Widget。
 	UpdatePromptWidget();
+}
+
+FVector UInteractionComponent::CalculatePromptRelativeLocation(const USceneComponent* RootComponent) const
+{
+	// 手动模式保持旧配置，适合需要特殊偏移的交互物。
+	if (!bAutoPlacePromptAtOwnerCenter || !GetOwner() || !RootComponent)
+	{
+		return PromptRelativeLocation;
+	}
+
+	// 读取拥有者的世界包围盒，中心点就是提示应该对齐的位置。
+	FVector BoundsOrigin;
+	FVector BoundsExtent;
+	GetOwner()->GetActorBounds(false, BoundsOrigin, BoundsExtent);
+
+	// WidgetComponent 附着在根组件上，所以要把世界坐标换算成根组件局部坐标。
+	return RootComponent->GetComponentTransform().InverseTransformPosition(BoundsOrigin);
 }
 
 void UInteractionComponent::UpdatePromptWidget()

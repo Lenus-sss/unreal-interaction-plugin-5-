@@ -1,4 +1,7 @@
-![Interaction Plugin Demo](Show/interact.gif)
+<p align="center">
+  <img src="Show/interact.gif" alt="Interaction prompt demo" width="49%">
+  <img src="Show/Bubble.gif" alt="Interaction bubble demo" width="49%">
+</p>
 
 # Interaction Plugin
 

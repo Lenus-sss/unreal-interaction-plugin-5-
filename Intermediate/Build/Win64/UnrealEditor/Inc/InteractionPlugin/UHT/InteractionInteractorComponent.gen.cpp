@@ -171,15 +171,16 @@ struct Z_Construct_UClass_UInteractionInteractorComponent_Statics
 		{ "ToolTip", "\xe4\xbb\x8e\xe7\x9b\xb8\xe6\x9c\xba\xe4\xb8\xad\xe5\xbf\x83\xe5\x90\x91\xe5\x89\x8d\xe6\xa3\x80\xe6\xb5\x8b\xe7\x9a\x84\xe6\x9c\x80\xe5\xa4\xa7\xe8\xb7\x9d\xe7\xa6\xbb\xef\xbc\x8c\xe5\x8d\x95\xe4\xbd\x8d\xe4\xb8\xba Unreal Units\xe3\x80\x82" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractionTraceRadius_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractionConeHalfAngleDegrees_MetaData[] = {
 		{ "Category", "Interaction" },
-		{ "ClampMin", "0.0" },
+		{ "ClampMax", "20.0" },
+		{ "ClampMin", "0.1" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/** \xe5\x87\x86\xe5\xbf\x83\xe6\x89\xab\xe6\x8f\x8f\xe5\x8d\x8a\xe5\xbe\x84\xef\xbc\x8c\xe5\x8d\x95\xe4\xbd\x8d\xe4\xb8\xba Unreal Units\xef\xbc\x9b\xe8\xae\xbe\xe4\xb8\xba 0 \xe6\x97\xb6\xe9\x80\x80\xe5\x9b\x9e\xe7\xb2\xbe\xe7\xa1\xae\xe7\xba\xbf\xe6\xa3\x80\xe6\xb5\x8b\xe3\x80\x82 */" },
+		{ "Comment", "/** \xe4\xbb\xa5\xe5\x87\x86\xe5\xbf\x83\xe6\x96\xb9\xe5\x90\x91\xe4\xb8\xba\xe8\xbd\xb4\xe7\x9a\x84\xe4\xba\xa4\xe4\xba\x92\xe9\x94\xa5\xe5\x8d\x8a\xe8\xa7\x92\xef\xbc\x8c\xe8\xa7\x92\xe5\xba\xa6\xe8\xb6\x8a\xe5\xb0\x8f\xe8\xb6\x8a\xe8\xa6\x81\xe6\xb1\x82\xe7\x8e\xa9\xe5\xae\xb6\xe5\x87\x86\xe7\xa1\xae\xe7\x9c\x8b\xe5\x90\x91\xe7\x89\xa9\xe4\xbd\x93\xe3\x80\x82 */" },
 #endif
 		{ "ModuleRelativePath", "Public/InteractionInteractorComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe5\x87\x86\xe5\xbf\x83\xe6\x89\xab\xe6\x8f\x8f\xe5\x8d\x8a\xe5\xbe\x84\xef\xbc\x8c\xe5\x8d\x95\xe4\xbd\x8d\xe4\xb8\xba Unreal Units\xef\xbc\x9b\xe8\xae\xbe\xe4\xb8\xba 0 \xe6\x97\xb6\xe9\x80\x80\xe5\x9b\x9e\xe7\xb2\xbe\xe7\xa1\xae\xe7\xba\xbf\xe6\xa3\x80\xe6\xb5\x8b\xe3\x80\x82" },
+		{ "ToolTip", "\xe4\xbb\xa5\xe5\x87\x86\xe5\xbf\x83\xe6\x96\xb9\xe5\x90\x91\xe4\xb8\xba\xe8\xbd\xb4\xe7\x9a\x84\xe4\xba\xa4\xe4\xba\x92\xe9\x94\xa5\xe5\x8d\x8a\xe8\xa7\x92\xef\xbc\x8c\xe8\xa7\x92\xe5\xba\xa6\xe8\xb6\x8a\xe5\xb0\x8f\xe8\xb6\x8a\xe8\xa6\x81\xe6\xb1\x82\xe7\x8e\xa9\xe5\xae\xb6\xe5\x87\x86\xe7\xa1\xae\xe7\x9c\x8b\xe5\x90\x91\xe7\x89\xa9\xe4\xbd\x93\xe3\x80\x82" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TraceChannel_MetaData[] = {
@@ -205,16 +206,16 @@ struct Z_Construct_UClass_UInteractionInteractorComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bDebugTrace_MetaData[] = {
 		{ "Category", "Interaction|Debug" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/** \xe5\xbc\x80\xe5\x90\xaf\xe5\x90\x8e\xe7\xbb\x98\xe5\x88\xb6\xe6\x9c\xac\xe5\xb8\xa7\xe5\x87\x86\xe5\xbf\x83\xe5\xb0\x84\xe7\xba\xbf\xef\xbc\x8c\xe7\xbb\xbf\xe8\x89\xb2\xe4\xbb\xa3\xe8\xa1\xa8\xe9\x94\x81\xe5\xae\x9a\xe4\xba\xa4\xe4\xba\x92\xe7\x89\xa9\xef\xbc\x8c\xe7\xba\xa2\xe8\x89\xb2\xe4\xbb\xa3\xe8\xa1\xa8\xe6\x9c\xaa\xe9\x94\x81\xe5\xae\x9a\xe3\x80\x82 */" },
+		{ "Comment", "/** \xe5\xbc\x80\xe5\x90\xaf\xe5\x90\x8e\xe7\xbb\x98\xe5\x88\xb6\xe6\x9c\xac\xe5\xb8\xa7\xe5\x87\x86\xe5\xbf\x83\xe4\xba\xa4\xe4\xba\x92\xe9\x94\xa5\xef\xbc\x8c\xe7\xbb\xbf\xe8\x89\xb2\xe4\xbb\xa3\xe8\xa1\xa8\xe9\x94\x81\xe5\xae\x9a\xe4\xba\xa4\xe4\xba\x92\xe7\x89\xa9\xef\xbc\x8c\xe7\xba\xa2\xe8\x89\xb2\xe4\xbb\xa3\xe8\xa1\xa8\xe6\x9c\xaa\xe9\x94\x81\xe5\xae\x9a\xe3\x80\x82 */" },
 #endif
 		{ "ModuleRelativePath", "Public/InteractionInteractorComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xe5\xbc\x80\xe5\x90\xaf\xe5\x90\x8e\xe7\xbb\x98\xe5\x88\xb6\xe6\x9c\xac\xe5\xb8\xa7\xe5\x87\x86\xe5\xbf\x83\xe5\xb0\x84\xe7\xba\xbf\xef\xbc\x8c\xe7\xbb\xbf\xe8\x89\xb2\xe4\xbb\xa3\xe8\xa1\xa8\xe9\x94\x81\xe5\xae\x9a\xe4\xba\xa4\xe4\xba\x92\xe7\x89\xa9\xef\xbc\x8c\xe7\xba\xa2\xe8\x89\xb2\xe4\xbb\xa3\xe8\xa1\xa8\xe6\x9c\xaa\xe9\x94\x81\xe5\xae\x9a\xe3\x80\x82" },
+		{ "ToolTip", "\xe5\xbc\x80\xe5\x90\xaf\xe5\x90\x8e\xe7\xbb\x98\xe5\x88\xb6\xe6\x9c\xac\xe5\xb8\xa7\xe5\x87\x86\xe5\xbf\x83\xe4\xba\xa4\xe4\xba\x92\xe9\x94\xa5\xef\xbc\x8c\xe7\xbb\xbf\xe8\x89\xb2\xe4\xbb\xa3\xe8\xa1\xa8\xe9\x94\x81\xe5\xae\x9a\xe4\xba\xa4\xe4\xba\x92\xe7\x89\xa9\xef\xbc\x8c\xe7\xba\xa2\xe8\x89\xb2\xe4\xbb\xa3\xe8\xa1\xa8\xe6\x9c\xaa\xe9\x94\x81\xe5\xae\x9a\xe3\x80\x82" },
 #endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_InteractionDistance;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_InteractionTraceRadius;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InteractionConeHalfAngleDegrees;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_TraceChannel;
 	static void NewProp_bUseRawEKey_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseRawEKey;
@@ -233,7 +234,7 @@ struct Z_Construct_UClass_UInteractionInteractorComponent_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionDistance = { "InteractionDistance", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionInteractorComponent, InteractionDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionDistance_MetaData), NewProp_InteractionDistance_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionTraceRadius = { "InteractionTraceRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionInteractorComponent, InteractionTraceRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionTraceRadius_MetaData), NewProp_InteractionTraceRadius_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionConeHalfAngleDegrees = { "InteractionConeHalfAngleDegrees", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionInteractorComponent, InteractionConeHalfAngleDegrees), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionConeHalfAngleDegrees_MetaData), NewProp_InteractionConeHalfAngleDegrees_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_TraceChannel = { "TraceChannel", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UInteractionInteractorComponent, TraceChannel), Z_Construct_UEnum_Engine_ECollisionChannel, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TraceChannel_MetaData), NewProp_TraceChannel_MetaData) }; // 756624936
 void Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bUseRawEKey_SetBit(void* Obj)
 {
@@ -247,7 +248,7 @@ void Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bDebugT
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bDebugTrace = { "bDebugTrace", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UInteractionInteractorComponent), &Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bDebugTrace_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bDebugTrace_MetaData), NewProp_bDebugTrace_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UInteractionInteractorComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionDistance,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionTraceRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_InteractionConeHalfAngleDegrees,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_TraceChannel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bUseRawEKey,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UInteractionInteractorComponent_Statics::NewProp_bDebugTrace,
@@ -289,10 +290,10 @@ UInteractionInteractorComponent::~UInteractionInteractorComponent() {}
 struct Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UInteractionInteractorComponent, UInteractionInteractorComponent::StaticClass, TEXT("UInteractionInteractorComponent"), &Z_Registration_Info_UClass_UInteractionInteractorComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionInteractorComponent), 1138024177U) },
+		{ Z_Construct_UClass_UInteractionInteractorComponent, UInteractionInteractorComponent::StaticClass, TEXT("UInteractionInteractorComponent"), &Z_Registration_Info_UClass_UInteractionInteractorComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UInteractionInteractorComponent), 1554719042U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_1933441562(TEXT("/Script/InteractionPlugin"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_2914607743(TEXT("/Script/InteractionPlugin"),
 	Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PerduePapillon_Plugins_unreal_interaction_plugin_5__Source_InteractionPlugin_Public_InteractionInteractorComponent_h__Script_InteractionPlugin_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
