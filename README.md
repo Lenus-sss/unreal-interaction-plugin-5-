@@ -1,3 +1,5 @@
+![Interaction Plugin Demo](Show/interact.gif)
+
 # Interaction Plugin
 
 适用于 Unreal Engine 5 的 C++ Runtime 交互插件：玩家准心锁定物体时，在物体上方显示世界空间提示 Widget；按下 **E** 后执行配置的交互类型。
