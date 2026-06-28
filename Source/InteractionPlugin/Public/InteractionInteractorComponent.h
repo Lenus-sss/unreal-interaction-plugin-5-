@@ -31,6 +31,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
 	float InteractionDistance = 500.0f;
 
+	/** 准心扫描半径，单位为 Unreal Units；设为 0 时退回精确线检测。 */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction", meta = (ClampMin = "0.0"))
+	float InteractionTraceRadius = 35.0f;
+
 	/** 射线检测使用的碰撞通道；默认要求物品阻挡 Visibility。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
 	TEnumAsByte<ECollisionChannel> TraceChannel = ECC_Visibility;

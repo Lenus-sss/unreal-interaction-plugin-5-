@@ -59,6 +59,24 @@
 1. 打开玩家 Pawn / Character Blueprint（或 C++ 类）。
 2. 添加 `Interaction Interactor Component`。
 3. 设置 `Interaction Distance`（默认 500）。
+4. 如果提示必须完全对准中心才出现，调大 `Interaction Trace Radius`；默认 35，设为 0 时使用精确线检测。
+
+如果玩家是 C++ Character，可在头文件前置声明并保存组件引用：
+
+```cpp
+class UInteractionInteractorComponent;
+
+UPROPERTY(VisibleAnywhere, Category = "Interaction")
+TObjectPtr<UInteractionInteractorComponent> InteractionInteractorComponent;
+```
+
+然后在构造函数中创建组件：
+
+```cpp
+#include "InteractionInteractorComponent.h"
+
+InteractionInteractorComponent = CreateDefaultSubobject<UInteractionInteractorComponent>("InteractionInteractorComponent");
+```
 
 组件只在本地控制的 Pawn 上运行。它每帧从玩家视角中心向前射线检测，焦点变化时显示/隐藏物体的提示；按下原始 **E** 键会调用交互。
 

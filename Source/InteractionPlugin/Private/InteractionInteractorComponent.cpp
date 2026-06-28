@@ -69,8 +69,20 @@ void UInteractionInteractorComponent::TickComponent(float DeltaTime, ELevelTick 
 	// 默认本帧没有交互焦点，只有命中有效交互组件时才赋值。
 	UInteractionComponent* NewFocusedInteraction = nullptr;
 
-	// 使用配置的碰撞通道从相机向准心方向执行单次射线检测。
-	if (GetWorld()->LineTraceSingleByChannel(Hit, ViewLocation, TraceEnd, TraceChannel, QueryParams))
+	// 半径大于 0 时使用球形扫描，给准心交互一点容错范围。
+	const bool bHitInteractionTrace = InteractionTraceRadius > 0.0f
+		? GetWorld()->SweepSingleByChannel(
+			Hit,
+			ViewLocation,
+			TraceEnd,
+			FQuat::Identity,
+			TraceChannel,
+			FCollisionShape::MakeSphere(InteractionTraceRadius),
+			QueryParams)
+		: GetWorld()->LineTraceSingleByChannel(Hit, ViewLocation, TraceEnd, TraceChannel, QueryParams);
+
+	// 使用配置的碰撞通道从相机向准心方向执行一次交互检测。
+	if (bHitInteractionTrace)
 	{
 		// 射线命中后先取得实际被命中的 Actor。
 		if (AActor* HitActor = Hit.GetActor())
