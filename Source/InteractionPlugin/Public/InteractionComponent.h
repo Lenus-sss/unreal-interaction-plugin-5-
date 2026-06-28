@@ -54,13 +54,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Prompt")
 	FVector PromptRelativeLocation = FVector(0.0, 0.0, 100.0);
 
-	/** 指定提示 Widget 使用 World 还是 Screen 空间。 */
+	/** 指定提示 Widget 使用 World 还是 Screen 空间；Screen 默认不会被门板深度遮挡。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Prompt")
-	EWidgetSpace PromptWidgetSpace = EWidgetSpace::World;
+	EWidgetSpace PromptWidgetSpace = EWidgetSpace::Screen;
 
-	/** 当不使用期望尺寸时，WidgetComponent 的渲染尺寸。 */
+	/** 当不使用期望尺寸时，WidgetComponent 的渲染尺寸；屏幕提示不需要过大的画布。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Prompt")
-	FIntPoint PromptDrawSize = FIntPoint(384, 128);
+	FIntPoint PromptDrawSize = FIntPoint(320, 96);
 
 	/** 开启后按 Widget 的期望尺寸渲染，而非 PromptDrawSize。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction|Prompt")

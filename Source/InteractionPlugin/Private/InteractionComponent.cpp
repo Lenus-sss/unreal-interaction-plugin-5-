@@ -155,6 +155,14 @@ void UInteractionComponent::CreatePromptWidget()
 	PromptWidgetComponent->SetRelativeLocation(PromptRelativeLocation);
 	// 应用 World 或 Screen 空间配置。
 	PromptWidgetComponent->SetWidgetSpace(PromptWidgetSpace);
+	// 使用透明混合，避免 Widget 背景在场景里显示成突兀的灰色矩形。
+	PromptWidgetComponent->SetBlendMode(EWidgetBlendMode::Transparent);
+	// 提示只负责显示，不参与碰撞或交互射线，避免挡住玩家准心检测。
+	PromptWidgetComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	// 交互提示不需要接收键鼠焦点，输入仍交给玩家控制器处理。
+	PromptWidgetComponent->SetWindowFocusable(false);
+	// 居中对齐投影位置，让 Screen 空间提示稳定贴在目标上方。
+	PromptWidgetComponent->SetPivot(FVector2D(0.5f, 0.5f));
 	// 仅对 World 空间提示应用物理缩放，避免影响屏幕空间 Widget 的屏幕尺寸。
 	if (PromptWidgetSpace == EWidgetSpace::World)
 	{
